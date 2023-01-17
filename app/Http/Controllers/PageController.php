@@ -9,8 +9,8 @@ class PageController extends Controller
 {
     public function index(){
 
-        // $train = Train::All();
-
-        return view("welcome");
+        $table=Train::All();
+        
+        return view("welcome",compact("table"));
     }
 }
